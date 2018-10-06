@@ -11,6 +11,9 @@ body {
     background: linear-gradient(to right, rgba(2,26,148,1) 0%, rgba(73,155,234,1) 100%);
     grid-area: sidebar;
     justify-content: center;
+    position: sticky;
+    top: 0;
+
 }
 
 
@@ -79,6 +82,7 @@ footer {
 
 .skills img {
     max-width: 200px;
+    border-radius: 10px;
 }
 
 
@@ -97,6 +101,43 @@ footer {
     /* text-align: bottom; */
 }
 
-@media screen and (min-width: 1040px) {
+.contact {
+    clear: left;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 1040px) {
+    .container {
+        font-size: 1.5em;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+        "sidebar content"
+        "sidebar footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr auto;
+        /* grid-template-rows: 130px 2000px 100px; */
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+ 
+    .sidebar {
+        width: 300px;
+    }
+
+    .sidebar nav {
+        position: fixed;
+        margin-left: 50px;
+
+    }
+
+
+
 
 }

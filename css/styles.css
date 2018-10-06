@@ -24,6 +24,7 @@ body {
 
 footer {
     grid-area: footer;
+    text-align: center;
 }
 
 .container {
@@ -36,7 +37,7 @@ footer {
     "content"
     "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 130px 2000px 100px;
+    grid-template-rows: 130px auto 100px;
 }
 
 nav ul {
@@ -70,7 +71,7 @@ footer {
     padding: 1em;
 }
 
-.about-me, .skills {
+.about-me, .skills, .portfolio {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
@@ -83,6 +84,16 @@ footer {
 .skills img {
     max-width: 200px;
     border-radius: 10px;
+}
+
+.portfolio img {
+    max-width: 320px;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+.portfolio img:hover {
+    opacity: 1;
 }
 
 
@@ -101,11 +112,18 @@ footer {
     /* text-align: bottom; */
 }
 
-.contact {
+.contact, .portfolio {
     clear: left;
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (min-width: 1040px) {
@@ -127,13 +145,13 @@ footer {
         flex-direction: column;
     }
  
-    .sidebar {
+    /* .sidebar {
         width: 300px;
-    }
+    } */
 
     .sidebar nav {
         position: fixed;
-        margin-left: 50px;
+        /* margin-left: 50px; */
 
     }
 
